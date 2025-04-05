@@ -63,7 +63,7 @@ const SignUp = () => {
             <TopNavbar />
             <Navbar />
             <div className='center bg-[#eeecec00] flex justify-center items-center mb-10 mt-5'>
-                <div className='form bg-[#ffffff] shadow-2xl sm:w-[400px] w-[100%] mx-7 sm:p-10 p-5 flex flex-col gap-8 rounded-3xl'>
+                <div className='form bg-[#ffffff] shadow-2xl sm:w-[480px] w-[100%] mx-7 sm:p-10 p-5 flex flex-col gap-8 rounded-3xl'>
                     <h1 className='text-3xl font-semibold text-black'>Sign Up</h1>
                     <form onSubmit={handleSubmit} className='flex flex-col gap-7'>
                         <div>

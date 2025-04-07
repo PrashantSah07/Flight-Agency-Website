@@ -52,9 +52,9 @@ const Navbar = () => {
                     <NavLink to='/offers' className={({ isActive }) => isActive ? darkTheme ? 'bg-gray-800 rounded-4xl' : 'bg-gray-200 rounded-4xl' : ''}><li className={`px-10 py-1 rounded-4xl ${darkTheme ? 'hover:bg-gray-900' : 'hover:bg-[#f0f4f3]'}`}>Offers</li></NavLink>
                     <NavLink to='/seats' className={({ isActive }) => isActive ? darkTheme ? 'bg-gray-800 rounded-4xl' : 'bg-gray-200 rounded-4xl' : ''}><li className={`px-10 py-1 rounded-4xl ${darkTheme ? 'hover:bg-gray-900' : 'hover:bg-[#f0f4f3]'}`}>Seats</li></NavLink>
                     <NavLink to='/destinations' className={({ isActive }) => isActive ? darkTheme ? 'bg-gray-800 rounded-4xl' : 'bg-gray-200 rounded-4xl' : ''}><li className={`px-10 py-1 rounded-4xl ${darkTheme ? 'hover:bg-gray-900' : 'hover:bg-[#f0f4f3]'}`}>Destinations</li></NavLink>
-                    <button className='lg:flex bg-blue-800 px-10 py-1.5 rounded-4xl text-white'>
+                    <NavLink to='/contact'><button className='lg:flex bg-blue-800 px-10 py-1.5 rounded-4xl text-white'>
                         Contact
-                    </button>
+                    </button></NavLink>
                 </div>
             </div>
         </>

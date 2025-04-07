@@ -19,7 +19,6 @@ const FlightList = () => {
     const api = '2a54435b1ac843cfbadedd53e888c197';
     const api2 = '44656ee5d6f49f4c8ae0b0fd9ea50c11';
     const api3 = '11caac55ba77f7ed3c9c1b7bbc030e5f';
-    const api4 = '605df357563383a8afba15253f537f27';
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -35,7 +34,7 @@ const FlightList = () => {
             setArrival('');
             return;
         }
-        setQuery(`https://api.aviationstack.com/v1/flights?access_key=5cff088be1ff068bacc34f90fbfecf35&dep_iata=${departure}&arr_iata=${arrival}`)
+        setQuery(`https://api.aviationstack.com/v1/flights?access_key=605df357563383a8afba15253f537f27&dep_iata=${departure}&arr_iata=${arrival}`)
 
     }
 
@@ -52,10 +51,10 @@ const FlightList = () => {
         <div className='my-10 max-w-[1550px] mx-auto flex flex-col gap-10 sm:px-10 px-5'>
             <motion.form onSubmit={handleSubmit} initial={{ y: -30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>
                 <div className='max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_170px] grid-cols-1 justify-center rounded-[10px] lg:py-6 lg:gap-5 gap-3  lg:px-10 sm:py-3 sm:px-5 px-3 py-3 bg-[#4e3ef7]'>
-                    <div className='w-full grid md:grid-cols-[1fr_30px_1fr] grid-cols-[1fr_30px] justify-center items-center gap-1'>
-                        <input className={`sm:px-5 sm:py-3 px-3 py-2 focus:outline-none border-1  border-[#0000005d] rounded-[10px] font-medium ${darkTheme ? 'bg-[#111827] text-white' : 'bg-white text-black'} `} type="text" name='departure' placeholder='Enter Departure IATA (e.g. DEL)' value={departure} onChange={handleChange} required />
+                    <div className='w-full md:grid md:grid-cols-[1fr_30px_1fr] flex flex-wrap justify-center items-center gap-1'>
+                        <input className={`w-full sm:px-5 sm:py-3 px-3 py-2 focus:outline-none border-1  border-[#0000005d] rounded-[10px] font-medium ${darkTheme ? 'bg-[#111827] text-white' : 'bg-white text-black'} `} type="text" name='departure' placeholder='Enter Departure IATA (e.g. DEL)' value={departure} onChange={handleChange} required />
                         <p className={`flex justify-center items-center rounded-2xl p-0.5 bg-white duration-200 ${rotate ? 'rotate-180' : '-rotate-0'}`} onClick={flip}><HiOutlineSwitchHorizontal color='blue' size={25} /></p>
-                        <input className={`sm:px-5 sm:py-3 px-3 py-2 focus:outline-none border-1  border-[#0000005d] rounded-[10px] font-medium ${darkTheme ? 'bg-[#111827] text-white' : 'bg-white text-black'} `} type="text" name='arrival' placeholder='Enter Arrival IATA (e.g. BOM)' value={arrival} onChange={handleChange} required />
+                        <input className={`w-full sm:px-5 sm:py-3 px-3 py-2 focus:outline-none border-1  border-[#0000005d] rounded-[10px] font-medium ${darkTheme ? 'bg-[#111827] text-white' : 'bg-white text-black'} `} type="text" name='arrival' placeholder='Enter Arrival IATA (e.g. BOM)' value={arrival} onChange={handleChange} required />
                     </div>
                     <button className='bg-[#fdc700] border-1 border-[#fdc700] sm:py-3 py-2 text-black font-bold h-full rounded-[10px]'>Get Results</button>
                 </div>
@@ -247,7 +246,7 @@ const FlightList = () => {
             )
                 : (<div className="flex flex-col items-center justify-center lg:mt-20 mt-10 text-center space-y-4">
                     <FaPlaneDeparture className="text-blue-500 text-6xl animate-bounce" />
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-blue-700 animate-pulse drop-shadow-lg">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-blue-500 animate-pulse drop-shadow-lg">
                         Search a flight to track live updates!
                     </h1>
                 </div>

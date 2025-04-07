@@ -9,6 +9,7 @@ import About from './pages/About.jsx';
 import Offers from './pages/Offers.jsx';
 import Seats from './pages/Seats.jsx';
 import Destinations from './pages/Destinations.jsx';
+import Contact from './pages/Contact.jsx'
 
 createRoot(document.getElementById('root')).render(
   <ThemeProvider>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/offers" element={<Offers />} />
         <Route path="/seats" element={<Seats />} />
         <Route path="/destinations" element={<Destinations />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>

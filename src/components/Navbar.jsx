@@ -32,9 +32,9 @@ const Navbar = () => {
                         <NavLink to='/seats' className={({ isActive }) => isActive ? darkTheme ? 'bg-gray-800 rounded-4xl' : 'bg-gray-200 rounded-4xl' : ''}><li className={`px-5 py-1 rounded-4xl ${darkTheme ? 'hover:bg-gray-900' : 'hover:bg-[#f0f4f3]'}`}>Seats</li></NavLink>
                         <NavLink to='/destinations' className={({ isActive }) => isActive ? darkTheme ? 'bg-gray-800 rounded-4xl' : 'bg-gray-200 rounded-4xl' : ''}><li className={`px-5 py-1 rounded-4xl ${darkTheme ? 'hover:bg-gray-900' : 'hover:bg-[#f0f4f3]'}`}>Destinations</li></NavLink>
                     </div>
-                    <button className='lg:flex bg-blue-800 px-5 py-1.5 rounded-4xl text-white'>
+                    <NavLink to='/contact'><button className='lg:flex bg-blue-800 px-5 py-1.5 rounded-4xl text-white'>
                         Contact
-                    </button>
+                    </button></NavLink>
                 </div>
                 <button className='flex lg:hidden' onClick={function () {
                     setShowNavbar(!showNavbar);
